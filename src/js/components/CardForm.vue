@@ -18,6 +18,7 @@
             <img
               :src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/' + currentCardBackground + '.jpeg'"
               class="card-item__bg"
+              :alt="currentCardBackground"
             >
           </div>
           <div class="card-item__wrapper">
@@ -25,6 +26,7 @@
               <img
                 src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/chip.png"
                 class="card-item__chip"
+                alt="chip"
               >
               <div class="card-item__type">
                 <transition name="slide-fade-up">
@@ -32,7 +34,7 @@
                     v-if="getCardType"
                     :key="getCardType"
                     :src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/images/' + getCardType + '.png'"
-                    alt=""
+                    :alt="getCardType"
                     class="card-item__typeImg"
                   >
                 </transition>
